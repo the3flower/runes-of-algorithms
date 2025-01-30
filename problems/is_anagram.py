@@ -7,7 +7,11 @@ def is_anagram_v1(s, t):
 
     count = 0
     for i in range(len(s)):
-        if 
+        if s[i] == t[i]:
+            count += 1
+
+    if count == len(s):
+        return True
 
     return False
 
