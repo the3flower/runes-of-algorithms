@@ -1,0 +1,18 @@
+SQL Command:
+    Syntax Order:
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition
+        GROUP BY column1
+        HAVING condition
+        ORDER BY column1 [ASC|DESC]
+        LIMIT number;
+
+        SELECT      → Specifies the columns you want to retrieve.
+        FROM        → Specifies the table from which to retrieve data.
+        WHERE       → Filters the rows based on a condition (must come before ORDER BY).
+        GROUP BY    → Groups the rows based on a column.
+        HAVING      → Filters grouped rows (used after GROUP BY, unlike WHERE, which filters individual rows).
+        ORDER BY    → Sorts the result (must come after WHERE or GROUP BY).
+        LIMIT       → Restricts the number of rows returned.
