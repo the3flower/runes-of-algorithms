@@ -16,3 +16,17 @@ SQL Command:
         HAVING      → Filters grouped rows (used after GROUP BY, unlike WHERE, which filters individual rows).
         ORDER BY    → Sorts the result (must come after WHERE or GROUP BY).
         LIMIT       → Restricts the number of rows returned.
+
+        Example:
+
+            SELECT department, COUNT(*) AS employee_count, AVG(salary) AS avg_salary
+            FROM employees
+            WHERE salary > 50000
+            GROUP BY department
+            HAVING AVG(salary) > 60000
+            ORDER BY avg_salary DESC
+            LIMIT 2;
+
+        Example:
+
+            SELECT COUNT(CITY) - COUNT(DISTINCT CITY) FROM STATION;
