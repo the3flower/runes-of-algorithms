@@ -39,3 +39,11 @@ SQL Command:
             FROM STATION
             ORDER BY LENGTH(CITY) DESC, CITY ASC
             LIMIT 1;
+
+        Example, some vowels things
+            SELECT DISTINCT CITY
+            FROM STATION
+            WHERE LEFT(CITY, 1) IN ('a', 'e', 'i', 'o', 'u')
+            OR LEFT(CITY, 1) IN ('A', 'E', 'I', 'O', 'U');
+
+            
