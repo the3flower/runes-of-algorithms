@@ -29,4 +29,13 @@ SQL Command:
         Example, compare normal values with unique values:
             SELECT COUNT(CITY) - COUNT(DISTINCT CITY) FROM STATION;
 
-        Example, 
+        Example, length and ORDER BY can have chain/double abilty omfg, nice to know LOL
+            SELECT CITY, LENGTH(CITY)
+            FROM STATION
+            ORDER BY LENGTH(CITY) ASC, CITY ASC
+            LIMIT 1;
+
+            SELECT CITY, LENGTH(CITY)
+            FROM STATION
+            ORDER BY LENGTH(CITY) DESC, CITY ASC
+            LIMIT 1;
