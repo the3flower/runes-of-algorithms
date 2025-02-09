@@ -21,5 +21,8 @@ print("\n")
 # Split
 print("[Split]")
 time = "14:05:30AM"
+print(f"BEFORE .split (type): {type(time)}")
+
 time = time.split("AM")
+print(f"AFTER .split (type): {type(time)}")
 print(time)
