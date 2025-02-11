@@ -26,3 +26,15 @@ print(f"BEFORE .split (type): {type(time)}")
 time = time.split("AM")
 print(f"AFTER .split (type): {type(time)}")
 print(time)
+print("\n")
+
+# String
+print("[String]")
+s = "Poomtum"
+# s[start:end]
+print(s[:3])
+print(s[-3:])
+print(s[4:])
+if s[-3:] == "tum":
+    s = s.split("tum")
+    print(s)
