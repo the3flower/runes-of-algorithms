@@ -31,10 +31,36 @@ print("\n")
 # String
 print("[String]")
 s = "Poomtum"
+print(f"Original String: {s}")
 # s[start:end]
-print(s[:3])
-print(s[-3:])
-print(s[4:])
+print(f"s[:3] {s[:3]}")
+print(f"s[-3:] {s[-3:]}")
+print(f"s[4:] {s[4:]}")
 if s[-3:] == "tum":
     s = s.split("tum")
     print(s)
+print("\n")
+
+# if elif else
+print("[if elif else]")
+num_1 = 5
+def two_if(num_1):
+    print("(Two if)")
+    if(num_1 <= 5):
+        num_1 + 100
+        print("Am <= 5")
+    if(num_1 > 4):
+        print("Am greater than 4")
+
+def if_elif(num_1):
+    print("(if and elif)")
+    if(num_1 <= 5):
+        num_1 + 100
+        print("Am <= 5")
+    elif(num_1 > 4):
+        print("Am greater than 4")
+
+two_if(num_1)
+if_elif(num_1)
+print("**if, elif, and else work as a conditional block. Once a condition is met, Python exits the block and does not check the remaining conditions.")
+
