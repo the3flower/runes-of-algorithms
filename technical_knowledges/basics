@@ -1,16 +1,17 @@
 Basic knowledge that I need to know
 
-WTF IS CULTURE FIT
+WTF IS CULTURE NOT FIT, TILTED RN
 
-1. OOP (Inheritance, Polymorphism, Encapsulation, Abstraction)
-2. APIs
-3. MVC
-3. REST APIs
-4. SQL basic query
-5. System Design
-6. Microservices
+    1. OOP (Inheritance, Polymorphism, Encapsulation, Abstraction)
+    2. APIs
+    3. MVC
+    3. REST APIs
+    4. SQL basic query
+    5. System Design
+    6. Microservices
 
 1. OOP
+    Inheritance
 
 2. APIs
     API Caching - is a mechanism to temporarily hold on to data returned over the network to end-user devices.
