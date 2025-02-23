@@ -1,0 +1,31 @@
+This is Guide by Me, for entry level.
+
+Which part should I focus?
+
+// Hold my beer kid, I will tell you which part I focusing on
+
+1. Ask yourself, which part do you want to go
+- in this case i focusing on SE or Developer
+
+2. DSA and Problem Solving
+- In every interview need this type of knowledge
+    a. Pick some language that you want, strict with that lang
+    b. Learn syntax of lang
+    c. Do basic math question
+    d. Grind leetcode, you will stuck leetcode for sure but you need to gather some little information/knowledge like
+        DSA and try to apply it to question
+
+3. Build some SHIT
+- This part focusing on building project/product by doing
+    a. Pick some stack (What is stack? Search Google plsssss zzzzz)
+    b. Start from easy project with your stack
+    c. Push your project to GitHub
+    d. You will learn:
+        - Gathering Requirement: in this case you are not gathering but try to think about requirement how your system work, what is the purpose of your system etc.
+        - (optional) System Design, Database Design, etc.: This is optional, you research and do it for second project. FYI: if you do this process for your very first project its a bit of wasting time, just my opinion
+        - Test: You will learn how to test you feature or your product, it is not optional but must do
+        - Version Control: I recommend to use GitHub, and you need to do it boy
+
+4. Database
+
+5. Cloud 
