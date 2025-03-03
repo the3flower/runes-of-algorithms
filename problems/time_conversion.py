@@ -39,4 +39,4 @@ def time_conversion_v2(s):
 
 s = "12:01:00AM" # should be 00:01:00
 s = "01:01:00PM"
-time_conversion(s)
+time_conversion_v2(s)

@@ -64,8 +64,17 @@ two_if(num_1)
 if_elif(num_1)
 print("**if, elif, and else work as a conditional block. Once a condition is met, Python exits the block and does not check the remaining conditions.")
 
-# Type
+#### Type
 print("[How to play with python type]")
 s = "12:01:00AM"
 print(int(s[0:2]))
 print(type(int(s[0:2])))
+
+#### How "set()" work
+print("[How set() work]")
+
+
+#### How "dict" work
+print("[How dict work in Python]")
+print("dict = {}")
+d = {}
