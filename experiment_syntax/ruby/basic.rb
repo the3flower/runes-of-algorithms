@@ -1,5 +1,5 @@
 def hello
-    puts "Hello"
+    puts "Hello this is Syntax experiment for Ruby!"
 end
 
 hello

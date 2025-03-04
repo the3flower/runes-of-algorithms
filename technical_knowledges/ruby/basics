@@ -1,1 +1,69 @@
-What is N+1?
+[Ruby MVC]
+- MVC is are Rails architecture
+
+    (M) Model
+        - Data and Business logic, use to interact with Database use ActiveRecord
+    (V) View
+        - Presentation Layer, renders HTML or JSON(depends)
+    (C) Controller
+        - Middle man between Model and View, receive input from View and interact with Model, 
+          manages request parameters, sets up instance variables, and handles the HTTP response.
+
+[Ruby Active Records]
+- ActiveRecord used ORM for communicate between Ruby Objects and Database
+    
+    (ORM) Object-Relational Mapping
+    - Map Objects to Table
+    - primarily design for Relational Databases (for non-relational database use different tools NOT ActiveRecord)
+
+    (CRUD) Operation
+    - methods in Rails .create .find .update .destroy
+
+    Association and Validations
+    - manage relationship between tables and validate data before saving
+    - (relationship): has_many, belongs_to
+    - (validation): unique: true, 
+
+[Ruby Migration]
+- Migration file in Rails is like a "script" to modify schema.rb, 
+schema.rb is like a snapshot/blue print of the current database.
+- create migration for modify -> run `rails db:migration` 
+- `rails generate migration NameOfMigration`
+
+    (How schema.rb work in Rails?)
+    - `rails db:create` rails will read database.yml file (database config, default is Sqlite)
+
+[What is N+1 query?]
+- You working with ORM like Rails and you need to query table that related to each other.
+(example)
+You have Users and Posts table, user can have many post, and you want to query every posts that user_id = 1 create
+1. (1) You need to create object for all user before you query specific post.
+    users = User.all
+
+2. (N) You need to query post that user_id = 1 post
+    users.each do |user|
+        if user.id == 1
+            puts user.posts.map(&:title)
+        end
+    end
+** This will cause of N+1 query **
+
+    How to identify?
+
+    How to fix?
+    - use `.includes` method to Eager Loading
+        users = User.includes(:posts) # loads all user and all post in one line
+
+[Rails Loading Methods]
+
+    Eager Loading
+    - `.includes` 
+
+    Lazy Loading (Default Behavior)
+
+    Preloading
+    -
+
+
+
+[How do you optimize database queries in Rails?]
