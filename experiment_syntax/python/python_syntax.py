@@ -70,11 +70,38 @@ s = "12:01:00AM"
 print(int(s[0:2]))
 print(type(int(s[0:2])))
 
-#### How "set()" work
+print("\n")
+
+##########  ##########
+
+
+##### How set() work #####
+print("####################")
 print("[How set() work]")
 
+print("Declare Empty set():")
+print("my_set = set()")
+my_set = set()
 
-#### How "dict" work
-print("[How dict work in Python]")
-print("dict = {}")
-d = {}
+print(f"Type of my_set: {type(my_set)}")
+
+my_set.add(6)
+print(f"Add: my_set.add(6) = {my_set}")
+
+print("nums = [7, 7, 8]")
+nums = [7, 7, 8]
+my_set.update(nums)
+print(f"Add multiple elements: my_set.update(nums) = {my_set}")
+print("note: handle only uniqueness")
+
+print("\n")
+
+##### How "dictionary" work #####
+print("####################")
+print("[How dict work]")
+
+print("Declare Empty dict:")
+print("my_dict = {}")
+my_dict = {}
+
+print(f"Type of my_dict: {type(my_dict)}")
