@@ -9,6 +9,10 @@ def two_sum_v1(arr, target):
     
     return [] # not found
 
+"""
+Two sum with Hash
+
+"""
 def two_sum_v2(arr, target):
     numMap = {}
     n = len(arr)
@@ -16,11 +20,12 @@ def two_sum_v2(arr, target):
     # build hash table
     for i in range(n):
         numMap[arr[i]] = i
+        print(numMap)
 
-    
     # Find the complement
     for i in range(n):
         complement = target - arr[i]
+        print(complement)
 
         if complement in numMap and numMap[complement] != i:
             return [i, numMap[complement]]
@@ -28,6 +33,7 @@ def two_sum_v2(arr, target):
     return []  # No solution found
 
 # Input
-arr = [2,7,11,15]
+arr = [1, 7, 11, 15, 2]
 target = 9
+
 print(two_sum_v2(arr, target))
