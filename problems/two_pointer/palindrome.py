@@ -33,7 +33,7 @@ def isPalindrome1(s):
             right -= 1
             continue
 
-        if s[left] != s[right]:
+        if s[left].lower() != s[right].lower():
             return False
 
         left += 1
@@ -45,4 +45,4 @@ s1 = "A man, a plan, a canal: Panama" # true
 s2 = "race a car" # false
 s3 = "asdfdsa" # true
 
-print(isPalindrome1(s3))
+print(isPalindrome1(s1))
