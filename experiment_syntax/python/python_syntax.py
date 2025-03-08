@@ -48,18 +48,19 @@ print("[if elif else]")
 num_1 = 5
 def two_if(num_1):
     print("(Two if)")
-    if(num_1 <= 5):
+    
+    if num_1 <= 5:
         num_1 + 100
         print("Am <= 5")
-    if(num_1 > 4):
+    if num_1 > 4:
         print("Am greater than 4")
 
 def if_elif(num_1):
     print("(if and elif)")
-    if(num_1 <= 5):
+    if num_1 <= 5:
         num_1 + 100
         print("Am <= 5")
-    elif(num_1 > 4):
+    elif num_1 > 4:
         print("Am greater than 4")
 
 two_if(num_1)
