@@ -3,8 +3,10 @@ print("\n")
 
 # How 'enumerate' work?
 print("[Enumerate]")
+
 def enumerate_test(arr):
     for i, num in enumerate(arr):
+        print(f"[i: {i}, num: {num}]")
         print(i)
         print(f"enumerated type of i: {type(i)}")
         print(num)
@@ -105,3 +107,4 @@ print("my_dict = {}")
 my_dict = {}
 
 print(f"Type of my_dict: {type(my_dict)}")
+
