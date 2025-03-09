@@ -1,4 +1,14 @@
-def fib_v1(n):
+"""
+Fibonacci sequence
+    
+    Formula:
+        f(n) = f(n-1) + f(n-2)
+
+    * f(0) = 0
+      f(1) = 1
+"""
+
+def fib_1(n):
     if n < 0:
         print("Incorrect input")
 
@@ -13,7 +23,7 @@ def fib_v1(n):
         return 1
 
     else:
-        return fib_v1(n-1) + fib_v1(n-2)
+        return fib_1(n-1) + fib_1(n-2)
 
 n = 9
 fib_nums = [
@@ -23,4 +33,4 @@ fib_nums = [
     102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903
 ]
 
-print(fib_v1(n))
+print(fib_1(n))
