@@ -71,7 +71,7 @@ def zilean(hour, minute, seconds):
     additional_hour = (hour_degree / total_minute) * minute
 
     # 
-    additional_minute = second_degree *
+    additional_minute = second_degree
 
     normal_hour = (hour_degree * hour) + additional_hour
     normal_minute = (minute_degree * minute)
@@ -80,8 +80,35 @@ def zilean(hour, minute, seconds):
 
     return min(result, 360 - result)
 
+def zilean3(hour, minute, second):
+    hour = hour % 12  # Convert to 12-hour format
+
+    # Constants
+    CIRCLE_DEGREE = 360
+    HOURS_IN_CLOCK = 12
+    MINUTES_IN_HOUR = 60
+    SECONDS_IN_MINUTE = 60
+    
+    # Degrees moved per unit of time
+    DEGREE_PER_HOUR = CIRCLE_DEGREE / HOURS_IN_CLOCK  # 30° per hour
+    DEGREE_PER_MINUTE = CIRCLE_DEGREE / MINUTES_IN_HOUR  # 6° per minute
+    DEGREE_PER_SECOND = DEGREE_PER_MINUTE / SECONDS_IN_MINUTE  # 0.1° per second
+
+    # Hour hand movement
+    ADDITIONAL_HOUR_DEGREE_PER_MINUTE = DEGREE_PER_HOUR / MINUTES_IN_HOUR  # 0.5° per minute
+    total_hour_degree = (DEGREE_PER_HOUR * hour) + (ADDITIONAL_HOUR_DEGREE_PER_MINUTE * minute)
+
+    # Minute hand movement
+    total_minute_degree = (DEGREE_PER_MINUTE * minute) + (DEGREE_PER_SECOND * second)
+
+    # Find the absolute angle difference
+    angle_difference = abs(total_hour_degree - total_minute_degree)
+
+    # Return the smaller angle
+    return min(angle_difference, CIRCLE_DEGREE - angle_difference)
+
 hour = int(input("Enter Hour (1-12): "))
 minute = int(input("Enter Minute (1-60): "))
-second = int(input("Enter Second ()"))
+second = int(input("Enter Second (1-60): "))
 
-print(zilean(hour, minute, second))
+print(zilean3(hour, minute, second))
