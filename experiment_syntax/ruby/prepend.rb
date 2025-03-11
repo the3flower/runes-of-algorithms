@@ -3,7 +3,7 @@ module Greeting
       "Hello from Greeting"
     end
 end
-  
+
 class Person
     prepend Greeting
   
