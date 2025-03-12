@@ -22,14 +22,16 @@ def valid_anagram(s1, s2):
     
     count = [0] * 26  # Array to store character counts (for lowercase letters)
 
-    for char1, char2 in zip(s1, s2):
-        count[ord(char1) - ord('a')] += 1  # Increment count for s1
-        count[ord(char2) - ord('a')] -= 1  # Decrement count for s2
-    
-    # zip() 
-    # ord() subtract to ASCII
-    
-    return all(c == 0 for c in count)  # If all counts are zero, it's an anagram
+    for char in s:
+        count[ord(char) - ord('a')] += 1
+
+    for char in t:
+        if count[ord(char) - ord('a')] == 0:
+            return False
+        
+        count[ord(char) - ord('a')] -= 1
+
+    return True
 
 
 s = "anagram"

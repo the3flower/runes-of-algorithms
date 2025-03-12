@@ -25,6 +25,22 @@ def fib_1(n):
     else:
         return fib_1(n-1) + fib_1(n-2)
 
+def fib_brute(n):
+    """Computes Fibonacci using simple recursion (brute force)."""
+    if n <= 1:
+        return n  # Base case
+    return fib_brute(n - 1) + fib_brute(n - 2)  # Recursive case
+
+def fib_memo(n, memo={}):
+    """Computes Fibonacci using recursion with memoization (dynamic programming)."""
+    if n in memo:
+        return memo[n]  # Return stored value if already computed
+    if n <= 1:
+        return n  # Base case
+    
+    memo[n] = fib_memo(n - 1, memo) + fib_memo(n - 2, memo)  # Store computed value
+    return memo[n]
+
 n = 9
 fib_nums = [
     0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,
