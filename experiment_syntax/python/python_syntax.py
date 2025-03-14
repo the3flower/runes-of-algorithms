@@ -109,3 +109,7 @@ my_dict = {}
 
 print(f"Type of my_dict: {type(my_dict)}")
 
+strs = ['one', 'two', 'three', 'four']
+
+print("strs = ['one', 'two', 'three', 'four']")
+print(f"Append set of string to dict = {my_dict}")
