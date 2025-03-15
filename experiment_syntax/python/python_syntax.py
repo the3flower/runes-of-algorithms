@@ -111,5 +111,8 @@ print(f"Type of my_dict: {type(my_dict)}")
 
 strs = ['one', 'two', 'three', 'four']
 
+for i in range(len(strs)):
+    my_dict[strs[i]] = 0
+
 print("strs = ['one', 'two', 'three', 'four']")
-print(f"Append set of string to dict = {my_dict}")
+print(f"Append set of string to dict by for loop = {my_dict}")
