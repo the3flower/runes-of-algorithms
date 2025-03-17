@@ -17,6 +17,8 @@ solution 1
             -1 = 2 + (-1) + 0
         - or add complement to hash
     - return three values (not a position)
+
+solution 2
 """
 
 def three_sum(nums):
