@@ -1,0 +1,114 @@
+System Design 101
+
+Fundamentals
+    
+    Basic Flow
+
+        DNS, Domain Name System(provide by 3rd parties like ISP, Cloud Provider, etc.)
+        - translates domain name to an IP address
+
+        1. Client access domain name like amazon.com
+
+            amazon.com -> DNS -> 13.35.23.88
+
+        2. Uses IP address to access server
+        3. Server will receive request and response back
+
+    Vertical Scaling
+    - Upgrade Machine, Increasing the capacity of a single server
+    - Adding more resource, add more RAM, CPU, disk space, network bandwidth
+
+    Horizontal Scaling
+    - Add more machines, Add more servers to distribute the load
+
+    Load Balancing
+    - Client -> Load Balancer <-> Server 1, Server 2, ..., Server N
+    - Play role like a middle man, Distributes incoming network traffic across multiple servers
+    (can sit between API gateway, Database, and so on depends on design and purpose)
+        
+        Types of Load Balancers
+            1. Hardware Load Balancer (F5, Citrix NetScaler)
+            2. Software Load Balancer (Nginx, HAProxy, Apache, Traefik)
+            3. Cloud-based Load Balancer (AWS Elastic Load Balancer (ELB), Google Cloud Load Balancer)
+
+        Strategies & Algorithms
+            1. Round Robin (Simple & Fast)
+                - Sends requests in a circular order.
+                - Example: Server 1 -> Server 2 -> Server 3 -> repeat.
+            2. Least Connections (Adaptive)
+                - Sends requests to the server with the "fewest active connections".
+            3. Least Response Time (Performance-Optimized)
+                - Sends requests to the "fastest responding server".
+            4. IP Hashing (Sticky Sessions)
+                - Assigns users to the same backend server based on their IP.
+            5. Weighted Load Balancing
+                - Assigns higher priority to stronger servers.
+            6. Adaptive Load Balancing (AI-driven)
+                - Uses real-time metrics (CPU, memory, network load).
+                - Example: AWS Auto Scaling.
+
+        Example Flow
+            1. User sends HTTP Request to amazon.com
+                - The browser resolves the domain name (amazon.com) using DNS.
+                (DNS owned by Amazon in this case)
+                (amazon.com → 13.35.23.88 (AWS Load Balancer IP))
+                (IP addresses represent )
+            2. Request reaches Load Balancer
+                - Load Balancer received HTTP headers.
+                - Load Balancer decides which backend server should handle the request. (depends on strategies)
+    
+        What If the Load Balancer Dies?
+            1. Multiple Load Balancers (Active-Passive)
+                - One active load balancer and one standby.
+                - If the active LB dies, the backup takes over.
+            
+            2. DNS Load Balancing
+                - Use multiple IPs for amazon.com so traffic automatically switches.
+
+            3. Cloud-Based Load Balancers
+                - AWS, Google, and Azure offer high-availability load balancers.
+
+    Caching
+    - Browser caching stores web page resources locally on the user's device (in cache memory or disk storage).
+    - Stores web page resources locally on the user's device (in cache memory or disk storage).
+    - Reduces repeat requests to the web server.
+        Memcached
+        - In-memory key-value store for caching database queries, API responses, and computed data.
+
+        Server <-> Cache <-> Database
+
+        Considerations for using Cache
+        - Using cache when data is read frequently but modified infrequently
+        - Expiration policy.
+        - This involves keeping the data store and the cache in sync.
+
+    Sticky Sessions
+    - Sticky sessions ensure that a user's requests always go to the same backend server.
+
+    Shared Storage
+    - A shared storage system allows multiple servers to access the same files or data.
+
+    Cookies
+    - Cookies are small pieces of data stored on the user's browser.
+    - Session Management (e.g., keep users logged in).
+    - Personalization (e.g., remember user preferences).
+    - Tracking & Analytics (e.g., Google Analytics tracking user behavior).
+
+    Content delivery network (CDN)
+    
+    
+
+    load balancer for ruby on rail or golang? for transaction work?
+
+    replication: master -master
+
+    load balancing + replication
+
+    can filter name of user like A-M user in load balancer A, and another go to load balancer B.
+        but in which part that I can use this strategy?
+
+    think about security
+
+    master, slave database?
+
+    if the whole system goes down? power, networking, security? data center is for whole system? have many data center mean different ip address, ip address represent data center not each server?

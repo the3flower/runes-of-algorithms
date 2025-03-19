@@ -1,0 +1,9 @@
+Relational Database
+- represent and store data in tables and rows.
+
+Non-relational Database
+- four categories: 
+    key-value stores, 
+    graph stores, 
+    column stores, 
+    document stores.
