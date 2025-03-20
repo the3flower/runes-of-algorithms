@@ -112,3 +112,5 @@ Fundamentals
     master, slave database?
 
     if the whole system goes down? power, networking, security? data center is for whole system? have many data center mean different ip address, ip address represent data center not each server?
+
+    ** learn more tools like Amazon s3 and so on
